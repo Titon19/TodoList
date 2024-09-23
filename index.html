@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind CSS Latihan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <nav
+      class="w-full bg-gray-800 text-slate-100 font-bold text-xl sm:text-2xl p-4"
+    >
+      ToDoList
+    </nav>
+    <section
+      class="tambahList p-4 sm:p-8 md:p-16 lg:p-20 bg-slate-100 flex items-center justify-center gap-5 flex-col"
+    >
+      <div
+        class="py-4 px-8 sm:px-24 md:px-32 xl:px-48 w-auto flex flex-col gap-5 items-center justify-center bg-gray-100 rounded-xl drop-shadow-xl ring-2 ring-purple-500"
+      >
+        <h2 class="text-2xl font-semibold">Masukkan List</h2>
+        <form action="index.html" class="flex flex-col gap-5" id="form">
+          <div class="w-full">
+            <label for="listName" class="text-slate-500 font-semibold"
+              >Masukkan hal yang akan dilakukan</label
+            >
+            <input
+              type="text"
+              name="listName"
+              id="listName"
+              class="w-full p-2 rounded-lg outline outline-2 outline-purple-500 text-gray-800 bg-purple-50"
+              placeholder="Masukkan List"
+              required
+            />
+          </div>
+          <div class="w-full">
+            <label for="listDate" class="text-slate-500 font-semibold"
+              >Masukkan target waktu selesai</label
+            >
+            <input
+              type="date"
+              name="listDate"
+              id="listDate"
+              class="w-full p-2 rounded-lg outline outline-2 outline-purple-500 text-gray-800 bg-purple-50"
+              required
+            />
+          </div>
+          <button
+            type="submit"
+            class="bg-gray-800 px-5 py-2 text-slate-100 rounded-lg font-semibold ring-2 ring-purple-500"
+          >
+            Simpan
+          </button>
+        </form>
+      </div>
+      <div
+        id="listNote"
+        class="py-4 px-8 sm:px-24 md:px-32 xl:px-48 w-auto flex flex-col gap-5 items-start justify-between w-full bg-gray-100 rounded-xl drop-shadow-xl ring-2 ring-purple-500"
+      ></div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
